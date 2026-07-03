@@ -1080,9 +1080,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .product-footer {
@@ -1883,9 +1881,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .room-prod-price {
@@ -2073,9 +2069,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     font-weight: 500;
     margin-bottom: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .cart-item-ref {
@@ -2322,6 +2316,11 @@ h1, h2, h3, h4, h5, h6 {
     .hero-content {
         padding-left: 16px;
         padding-right: 16px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     /* Section headers */
@@ -2339,6 +2338,20 @@ h1, h2, h3, h4, h5, h6 {
     }
     .product-info {
         padding: 12px !important;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .product-footer {
+        width: 100%;
+        justify-content: center !important;
+        border-top: none !important;
+        padding-top: 4px !important;
+    }
+    .product-category {
+        text-align: center;
     }
     .product-title {
         font-size: 0.95rem !important;
@@ -2391,6 +2404,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .modal-details {
         padding: 24px 20px;
+        text-align: center !important;
     }
     .modal-product-title {
         font-size: 1.5rem;
@@ -2399,22 +2413,55 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.15rem;
         margin-bottom: 16px;
     }
+    .modal-product-variants {
+        align-items: center !important;
+    }
+    .variants-list {
+        justify-content: center !important;
+    }
     .product-attributes {
         margin-bottom: 20px;
         padding: 12px 0;
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: center !important;
     }
     .modal-actions {
         flex-direction: column;
         gap: 12px;
+        align-items: center !important;
     }
     .quantity-selector {
         width: 100%;
         justify-content: space-between;
     }
     
-    /* Form fields */
+    /* Form fields and contact info */
     .contact-form-wrapper {
         padding: 24px 16px;
+        text-align: center !important;
+    }
+    .contact-info {
+        text-align: center !important;
+    }
+    .contact-details {
+        align-items: center !important;
+    }
+    .contact-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .philosophy-text-wrapper {
+        text-align: center !important;
+    }
+    .philosophy-stats {
+        justify-content: center !important;
+        gap: 24px !important;
+    }
+    .stat-item {
+        align-items: center !important;
     }
 }
 
