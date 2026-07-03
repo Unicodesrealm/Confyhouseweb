@@ -812,6 +812,7 @@ function setupEventListeners() {
                     
                     // Close drawers
                     mobileNavDrawer.classList.remove('active');
+                    document.body.style.overflow = '';
                 }
             }
         });
@@ -878,10 +879,12 @@ function setupEventListeners() {
     // Mobile nav toggler
     mobileMenuToggle.addEventListener('click', () => {
         mobileNavDrawer.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
 
     mobileMenuClose.addEventListener('click', () => {
         mobileNavDrawer.classList.remove('active');
+        document.body.style.overflow = '';
     });
 
     // Cart trigger drawer
