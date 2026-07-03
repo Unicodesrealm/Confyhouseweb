@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confyhouse - Mobiliário de alta qualidade e design intemporal para famílias moçambicanas. Torne a sua casa num verdadeiro lar.">
+    <title>Confyhouse | Mobiliário de Luxo & Conforto em Moçambique</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="Assets/Confyhouse logo.png" alt="Confyhouse" class="preloader-logo" onerror="this.style.display='none';">
+            <h1 class="logo-text">CONFYHOUSE</h1>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-wrapper">
+                <img src="Assets/Confyhouse logo.png" alt="Confyhouse Logo" class="nav-logo" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\' font-size=\'90\'>🛋️</text></svg>';">
+                <span class="logo-name">CONFYHOUSE</span>
+            </a>
+            
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Início</a></li>
+                    <li><a href="#collections" class="nav-link">Coleções</a></li>
+                    <li><a href="#inspiration" class="nav-link">Inspiração</a></li>
+                    <li><a href="#philosophy" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#contact" class="nav-link">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="search-trigger" class="icon-btn" aria-label="Pesquisar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button id="cart-trigger" class="icon-btn selection-basket-btn" aria-label="A Minha Seleção">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count" class="badge">0</span>
+                </button>
+                <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Global Search Overlay -->
+        <div id="search-overlay" class="search-overlay">
+            <div class="search-overlay-container">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="global-search-input" placeholder="Pesquisar sofás, móveis de TV, armários..." autocomplete="off">
+                    <button id="search-close" class="icon-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="search-results-preview" class="search-results-preview"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+        <div class="drawer-header">
+            <span class="logo-name">CONFYHOUSE</span>
+            <button id="mobile-menu-close" class="icon-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-nav-link">Início</a></li>
+            <li><a href="#collections" class="mobile-nav-link">Coleções</a></li>
+            <li><a href="#inspiration" class="mobile-nav-link">Inspiração</a></li>
+            <li><a href="#philosophy" class="mobile-nav-link">Sobre Nós</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contactos</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- Hero Banner Slider -->
+        <section id="hero" class="hero-section">
+            <div class="hero-slides">
+                <!-- Slide 1 -->
+                <div class="hero-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Assets/PH_191155_2_62504fcfbb.jpg');">
+                    <div class="hero-content">
+                        <span class="hero-subtitle">Design Intemporal & Conforto</span>
+                        <h2 class="hero-title">O luxo do aconchego para a sua família</h2>
+                        <p class="hero-description">Mobiliário premium desenhado para elevar o conforto da sua casa em Moçambique.</p>
+                        <div class="hero-ctas">
+                            <a href="#collections" class="btn btn-primary">Ver Coleções</a>
+                            <a href="#contact" class="btn btn-outline">Como Encomendar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Assets/PE_878502_ab5c330185.jpg');">
+                    <div class="hero-content">
+                        <span class="hero-subtitle">Qualidade Premium</span>
+                        <h2 class="hero-title">Detalhes que fazem a diferença</h2>
+                        <p class="hero-description">Estilo minimalista e sofisticado para salas de estar que contam histórias.</p>
+                        <div class="hero-ctas">
+                            <a href="#collections" class="btn btn-primary">Explorar</a>
+                            <a href="#inspiration" class="btn btn-outline">Galeria</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Assets/PH_191127_1_d1dbd7d5c4.jpg');">
+                    <div class="hero-content">
+                        <span class="hero-subtitle">Consultoria Exclusiva</span>
+                        <h2 class="hero-title">A sua casa, à sua medida</h2>
+                        <p class="hero-description">Descubra soluções de arrumação e design personalizáveis para toda a casa.</p>
+                        <div class="hero-ctas">
+                            <a href="#contact" class="btn btn-primary">Falar com Consultor</a>
+                            <a href="#collections" class="btn btn-outline">Ver Produtos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Controls -->
+            <div class="slider-controls">
+                <button class="slide-control-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slide-control-btn next" aria-label="Seguinte"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            
+            <!-- Slider Dots -->
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+                <span class="scroll-text">Deslize para explorar</span>
+            </div>
+        </section>
+
+        <!-- Brand Philosophy / Welcome -->
+        <section id="philosophy" class="philosophy-section section-padding">
+            <div class="container">
+                <div class="philosophy-grid">
+                    <div class="philosophy-text-wrapper fade-in-element">
+                        <span class="section-tag">A Nossa Filosofia</span>
+                        <h3 class="section-title">Design minimalista, conforto máximo</h3>
+                        <p class="philosophy-lead">Na Confyhouse, acreditamos que um lar é o refúgio onde a vida das famílias moçambicanas se desenrola em toda a sua plenitude. Por isso, oferecemos peças com um design sofisticado e intemporal.</p>
+                        <p class="philosophy-body">Inspirados pela elegância luxuosa do minimalismo moderno e pela funcionalidade escandinava, selecionamos cuidadosamente mobiliário de alta qualidade. Cada sofá, móvel de TV e solução de arrumação é escolhido para garantir durabilidade, apelo estético impecável e, acima de tudo, um conforto excecional.</p>
+                        <div class="philosophy-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Qualidade Garantida</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100% Online</span>
+                                <span class="stat-label">Atendimento Digital</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Bespoke</span>
+                                <span class="stat-label">Atendimento Personalizado</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="philosophy-images-wrapper fade-in-element">
+                        <div class="img-container main-img">
+                            <img src="Assets/PE_836736_cc6958256b.jpg" alt="Sala de estar decorada Confyhouse">
+                        </div>
+                        <div class="img-container sub-img accent-nude-bg">
+                            <img src="Assets/PH153211-crop001.avif" alt="Detalhe de decoração minimalista">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Catalog -->
+        <section id="collections" class="collections-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center fade-in-element">
+                    <span class="section-tag">A Nossa Coleção</span>
+                    <h3 class="section-title font-serif">Mobiliário de Luxo Curado</h3>
+                    <p class="section-subtitle">Explore a nossa seleção exclusiva de móveis de TV, sofás refinados e arrumação inteligente para o seu lar.</p>
+                </div>
+
+                <!-- Catalog Navigation & Search -->
+                <div class="catalog-controls fade-in-element">
+                    <div class="category-filters">
+                        <button class="filter-btn active" data-filter="all">Tudo</button>
+                        <button class="filter-btn" data-filter="sofa">Sofás</button>
+                        <button class="filter-btn" data-filter="tv">Móveis de TV</button>
+                        <button class="filter-btn" data-filter="storage">Arrumação</button>
+                        <button class="filter-btn" data-filter="decor">Acessórios</button>
+                    </div>
+                    
+                    <div class="catalog-search">
+                        <input type="text" id="catalog-search-input" placeholder="Pesquisar nesta coleção...">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div id="product-grid" class="product-grid fade-in-element">
+                    <!-- Products will be generated dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Inspiration Moodboard / Virtual Gallery -->
+        <section id="inspiration" class="inspiration-section section-padding">
+            <div class="container">
+                <div class="section-header text-center fade-in-element">
+                    <span class="section-tag">Espaços com Alma</span>
+                    <h3 class="section-title font-serif">Galeria de Inspiração</h3>
+                    <p class="section-subtitle">Veja como as nossas peças se combinam em ambientes luxuosos, acolhedores e funcionais. Inspire-se para decorar a sua casa.</p>
+                </div>
+
+                <div class="moodboard-grid fade-in-element">
+                    <!-- Item 1 -->
+                    <div class="moodboard-item item-large" style="background-image: url('Assets/PH_191155_2_62504fcfbb.jpg');" data-room="living-classic">
+                        <div class="moodboard-overlay">
+                            <div class="moodboard-content">
+                                <span class="room-category">Sala de Estar</span>
+                                <h4 class="room-title">Harmonia em Tons Neutros</h4>
+                                <p class="room-desc">Um layout aberto que destaca o sofá e a combinação de móveis de TV em perfeita simetria.</p>
+                                <button class="btn btn-text explore-room-btn">Explorar Ambiente <i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="moodboard-item item-tall" style="background-image: url('Assets/PE_878502_ab5c330185.jpg');" data-room="dining-cozy">
+                        <div class="moodboard-overlay">
+                            <div class="moodboard-content">
+                                <span class="room-category">Sala de Jantar & Estar</span>
+                                <h4 class="room-title">Simplicidade Escandinava</h4>
+                                <p class="room-desc">Madeira clara, luz natural abundante e espaços integrados para momentos em família.</p>
+                                <button class="btn btn-text explore-room-btn">Explorar Ambiente <i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="moodboard-item" style="background-image: url('Assets/PH_191127_1_d1dbd7d5c4.jpg');" data-room="lounge-luxury">
+                        <div class="moodboard-overlay">
+                            <div class="moodboard-content">
+                                <span class="room-category">Espaço Lounge</span>
+                                <h4 class="room-title">Elegância Moderna</h4>
+                                <p class="room-desc">Arrumação moderna combinada com iluminação suave para uma atmosfera luxuosa.</p>
+                                <button class="btn btn-text explore-room-btn">Explorar Ambiente <i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="moodboard-item" style="background-image: url('Assets/PH182892.avif');" data-room="reading-nook">
+                        <div class="moodboard-overlay">
+                            <div class="moodboard-content">
+                                <span class="room-category">Cantinho de Leitura</span>
+                                <h4 class="room-title">Aconchego Minimalista</h4>
+                                <p class="room-desc">Almofadas confortáveis e tons nude que convidam ao descanso.</p>
+                                <button class="btn btn-text explore-room-btn">Explorar Ambiente <i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bespoke Consultation CTA -->
+        <section class="bespoke-cta section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Assets/PH195426.avif');">
+            <div class="container text-center">
+                <div class="cta-card fade-in-element">
+                    <span class="cta-tag">Bespoke Design</span>
+                    <h3 class="cta-title">Quer personalizar o seu espaço?</h3>
+                    <p class="cta-desc">Dispomos de serviço de consultoria em design de interiores. Ajudamos a selecionar cores, tamanhos e tecidos adequados para a sua moradia em qualquer parte de Moçambique.</p>
+                    <a href="https://wa.me/258843842960?text=Olá%20Confyhouse!%20Gostaria%20de%20fazer%20uma%20encomenda%20personalizada." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                        <i class="fa-brands fa-whatsapp"></i> Falar com um Consultor
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in-element">
+                        <span class="section-tag">Como Encomendar</span>
+                        <h3 class="section-title">Encomendas & Atendimento Digital</h3>
+                        <p class="contact-intro">Operamos exclusivamente online, entregando confortavelmente em todo o território de Moçambique. As nossas peças são processadas sob encomenda personalizada para garantir exclusividade e controle de qualidade.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                                <div class="contact-text">
+                                    <h4>Entregas</h4>
+                                    <p>Entrega personalizada ao domicílio em Maputo, Matola, Beira, Nampula e restantes províncias.</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-text">
+                                    <h4>Telefones</h4>
+                                    <p>+258 84 384 2960 (WhatsApp) | +258 87 384 2960</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                                <div class="contact-text">
+                                    <h4>Instagram</h4>
+                                    <p><a href="https://www.instagram.com/confyhouselda/" target="_blank" rel="noopener noreferrer">@confyhouselda</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-headset"></i></div>
+                                <div class="contact-text">
+                                    <h4>Atendimento Online</h4>
+                                    <p>Segunda a Sexta: 08:30 - 18:00</p>
+                                    <p>Sábado: 09:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper fade-in-element">
+                        <h4>Enviar Mensagem</h4>
+                        <p>Escreva-nos e responderemos o mais breve possível.</p>
+                        <form id="contact-form" class="elegant-form">
+                            <div class="form-group">
+                                <label for="form-name">Nome Completo</label>
+                                <input type="text" id="form-name" required placeholder="Ex: Abel Muthemba">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">WhatsApp / Telefone</label>
+                                <input type="tel" id="form-phone" required placeholder="Ex: 84 384 2960">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">A sua Mensagem</label>
+                                <textarea id="form-message" rows="5" required placeholder="Como podemos ajudar a equipar o seu lar?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand-col">
+                        <div class="footer-logo">
+                            <img src="Assets/Confyhouse logo.png" alt="Confyhouse" class="footer-logo-img" onerror="this.style.display='none';">
+                            <span class="logo-name">CONFYHOUSE</span>
+                        </div>
+                        <p class="brand-bio">Mobiliário de luxo minimalista e conforto duradouro para famílias em Moçambique. O lar é o centro de tudo.</p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/confyhouselda/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://wa.me/258843842960" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Links Rápidos</h4>
+                        <ul>
+                            <li><a href="#hero">Início</a></li>
+                            <li><a href="#collections">Coleções</a></li>
+                            <li><a href="#inspiration">Inspiração</a></li>
+                            <li><a href="#philosophy">A Nossa Filosofia</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Coleções</h4>
+                        <ul>
+                            <li><a href="#collections" class="category-link" data-cat="sofa">Sofás</a></li>
+                            <li><a href="#collections" class="category-link" data-cat="tv">Móveis de TV</a></li>
+                            <li><a href="#collections" class="category-link" data-cat="storage">Armários & Arrumação</a></li>
+                            <li><a href="#collections" class="category-link" data-cat="decor">Acessórios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter-col">
+                        <h4>Siga-nos no Instagram</h4>
+                        <p>Inspiração diária de design de interiores e novidades sobre as nossas coleções exclusivas.</p>
+                        <a href="https://www.instagram.com/confyhouselda/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-radius: 20px; padding: 10px 20px;">
+                            <i class="fa-brands fa-instagram"></i> @confyhouselda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Confyhouse. Todos os direitos reservados. Projetado para famílias moçambicanas.</p>
+                <ul class="footer-legal-links">
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Quick View Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button id="modal-close" class="modal-close-btn" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <img id="modal-product-img" src="" alt="Produto">
+                </div>
+                <div class="modal-details">
+                    <span id="modal-product-cat" class="modal-product-cat">Categoria</span>
+                    <h2 id="modal-product-title" class="modal-product-title">Nome do Produto</h2>
+                    
+                    <div id="modal-product-price" class="modal-product-price">Preço Sob Consulta</div>
+                    
+                    <p id="modal-product-desc" class="modal-product-desc">Descrição longa do produto...</p>
+                    
+                    <div class="product-attributes">
+                        <div class="attribute-group">
+                            <span class="attribute-label">Dimensões:</span>
+                            <span id="modal-product-dims" class="attribute-value">L x P x A cm</span>
+                        </div>
+                        <div class="attribute-group">
+                            <span class="attribute-label">Materiais:</span>
+                            <span id="modal-product-materials" class="attribute-value">Materiais nobres</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus" aria-label="Diminuir quantidade"><i class="fa-solid fa-minus"></i></button>
+                            <span id="modal-qty-val" class="qty-val">1</span>
+                            <button class="qty-btn plus" aria-label="Aumentar quantidade"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <button id="modal-add-to-cart-btn" class="btn btn-primary btn-grow">
+                            <i class="fa-solid fa-plus"></i> Adicionar à Seleção
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Exploration Modal (Get the Look) -->
+    <div id="room-modal" class="modal-overlay">
+        <div class="modal-container room-modal-container">
+            <button id="room-modal-close" class="modal-close-btn" aria-label="Fechar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="room-modal-content">
+                <div class="room-modal-image-panel">
+                    <img id="room-modal-img" src="" alt="Ambiente">
+                </div>
+                <div class="room-modal-products-panel">
+                    <h3 class="room-panel-title">Mobiliário deste Ambiente</h3>
+                    <p class="room-panel-subtitle">Adicione as peças que compõem este visual à sua lista de orçamento.</p>
+                    <div id="room-products-list" class="room-products-list">
+                        <!-- Dynamic items -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inquiry Shopping Basket / Drawer -->
+    <div id="cart-drawer" class="cart-drawer-overlay">
+        <div class="cart-drawer">
+            <div class="drawer-header">
+                <div class="drawer-title">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <h3>A Minha Seleção</h3>
+                    <span id="drawer-item-count" class="badge">0</span>
+                </div>
+                <button id="cart-close" class="icon-btn" aria-label="Fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Items (Dynamic) -->
+            <div id="drawer-items-container" class="drawer-items-container">
+                <!-- Cart items generated here -->
+                <div class="empty-cart-message">
+                    <i class="fa-solid fa-couch"></i>
+                    <p>A sua lista está vazia.</p>
+                    <p>Explore as nossas coleções e adicione as peças de que gosta para solicitar um orçamento.</p>
+                    <a href="#collections" id="drawer-explore-btn" class="btn btn-outline">Explorar Coleções</a>
+                </div>
+            </div>
+
+            <!-- Inquiry Request Form (Shows only if items in basket) -->
+            <div id="drawer-footer" class="drawer-footer hidden">
+                <form id="inquiry-form" class="elegant-form drawer-form">
+                    <h4>Solicitar Orçamento</h4>
+                    <p class="form-help">Preencha os seus dados. Enviaremos um orçamento detalhado e prazos de entrega para Moçambique via WhatsApp.</p>
+                    
+                    <div class="form-group">
+                        <label for="inquiry-name">Nome Completo</label>
+                        <input type="text" id="inquiry-name" required placeholder="Ex: Cláudio Macamo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inquiry-location">Cidade / Província</label>
+                        <select id="inquiry-location" required>
+                            <option value="" disabled selected>Selecione a sua localização</option>
+                            <option value="Maputo Cidade">Maputo Cidade</option>
+                            <option value="Maputo Província (Matola)">Matola / Maputo Província</option>
+                            <option value="Gaza (Xai-Xai)">Gaza (Xai-Xai)</option>
+                            <option value="Inhambane">Inhambane</option>
+                            <option value="Sofala (Beira)">Sofala (Beira)</option>
+                            <option value="Manica (Chimoio)">Manica (Chimoio)</option>
+                            <option value="Tete">Tete</option>
+                            <option value="Zambézia (Quelimane)">Zambézia (Quelimane)</option>
+                            <option value="Nampula">Nampula</option>
+                            <option value="Cabo Delgado (Pemba)">Cabo Delgado (Pemba)</option>
+                            <option value="Niassa (Lichinga)">Niassa (Lichinga)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-notes">Observações Especiais (Opcional)</label>
+                        <textarea id="inquiry-notes" rows="2" placeholder="Ex: Cores personalizadas, alterações de medidas..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full whatsapp-submit-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast Notification -->
+    <div id="toast-notification" class="toast-notification">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toast-message">Item adicionado com sucesso!</span>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
