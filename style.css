@@ -742,6 +742,12 @@ h1, h2, h3, h4, h5, h6 {
         left: 50% !important;
         transform: translateX(-50%) !important;
     }
+    .philosophy-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 24px;
+        padding-top: 24px;
+    }
 }
 
 /* Philosophy Section */
