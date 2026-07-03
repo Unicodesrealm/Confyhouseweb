@@ -430,12 +430,11 @@ function renderProducts() {
         `;
         return;
     }
-
     filteredProducts.forEach(prod => {
         const card = document.createElement('article');
         card.className = 'product-card';
         card.innerHTML = `
-            <div class="product-img-wrapper">
+            <div class="product-img-wrapper" style="cursor: pointer;">
                 <img src="${prod.image}" alt="${prod.name}" loading="lazy">
                 <div class="product-overlay-actions">
                     <button class="product-action-btn view-details-btn" data-id="${prod.id}">Ver Detalhes</button>
@@ -444,7 +443,7 @@ function renderProducts() {
                     </button>
                 </div>
             </div>
-            <div class="product-info">
+            <div class="product-info" style="cursor: pointer;">
                 <span class="product-category">${getCategoryLabel(prod.category)}</span>
                 <h4 class="product-title">${prod.name}</h4>
                 <p class="product-category" style="text-transform: none; font-size: 0.8rem; margin-bottom: 12px; height: 32px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
@@ -455,16 +454,27 @@ function renderProducts() {
                 </div>
             </div>
         `;
+        
+        card.addEventListener('click', (e) => {
+            if (!e.target.closest('.quick-add-btn')) {
+                openProductModal(prod.id);
+            }
+        });
+        
         productGrid.appendChild(card);
     });
 
     // Add listeners to new elements
     document.querySelectorAll('.view-details-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => openProductModal(e.target.dataset.id));
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openProductModal(e.currentTarget.dataset.id);
+        });
     });
     
     document.querySelectorAll('.quick-add-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
+            e.stopPropagation();
             const id = e.currentTarget.dataset.id;
             addToCart(id, 1);
         });

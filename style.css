@@ -748,6 +748,35 @@ h1, h2, h3, h4, h5, h6 {
         gap: 24px;
         padding-top: 24px;
     }
+    .product-overlay-actions {
+        transform: none !important;
+        background: none !important;
+        padding: 10px !important;
+        width: auto !important;
+        left: auto !important;
+        right: 0 !important;
+        top: 0 !important;
+        bottom: auto !important;
+    }
+    .view-details-btn {
+        display: none !important;
+    }
+    .quick-add-btn {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 50% !important;
+        box-shadow: var(--shadow-sm) !important;
+        background-color: var(--primary-white) !important;
+        color: var(--text-primary) !important;
+        border: 1px solid var(--border-color) !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem !important;
+    }
+    .bespoke-cta {
+        background-attachment: scroll !important;
+    }
 }
 
 /* Philosophy Section */
@@ -2304,8 +2333,24 @@ h1, h2, h3, h4, h5, h6 {
     
     /* Product grid items spacing */
     .product-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+    .product-info {
+        padding: 12px !important;
+    }
+    .product-title {
+        font-size: 0.95rem !important;
+        margin-bottom: 4px !important;
+    }
+    .product-price {
+        font-size: 0.85rem !important;
+    }
+    .catalog-search {
+        max-width: none !important;
+    }
+    .philosophy-images-wrapper {
+        height: 320px !important;
     }
     
     /* Cart drawer spacing optimizations */
