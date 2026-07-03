@@ -150,6 +150,23 @@ const PRODUCTS = [
         colorName: "Branco Brilhante",
         colorCode: "#f3f3f3"
     },
+    {
+        id: "besta-eket-tv-white",
+        name: "Bestå Eket Branco",
+        type: "Móvel de TV suspenso minimalista",
+        category: "tv",
+        ref: "108.831.50",
+        price: "34.500 MT",
+        priceValue: 34500,
+        image: "Assets/besta-eket-movel-de-tv-branco-lappviken-branco__1088315_pe861082_s5.avif",
+        altImages: ["Assets/besta-eket-movel-de-tv-branco-lappviken-branco__1068919_pe853663_s5.avif"],
+        dimensions: "120 x 40 x 38 cm",
+        materials: "Frentes Lappviken brancas mate, estrutura Eket leve e resistente, abertura por pressão (push-open).",
+        description: "O Bestå Eket suspenso cria uma sensação de leveza flutuante na sua sala. Sem pernas visíveis, facilita a limpeza e oferece um visual clean escandinavo impecável.",
+        family: "besta-tv",
+        colorName: "Eket Branco",
+        colorCode: "#f9f9f9"
+    },
     // Brimnes TV Family
     {
         id: "tv-brimnes-black",
@@ -184,6 +201,23 @@ const PRODUCTS = [
         family: "brimnes-tv",
         colorName: "Branco",
         colorCode: "#ffffff"
+    },
+    {
+        id: "tv-brimnes-combination",
+        name: "Brimnes Combinação Branco",
+        type: "Estante e móvel de TV combinado",
+        category: "tv",
+        ref: "107.048.21",
+        price: "56.000 MT",
+        priceValue: 56000,
+        image: "Assets/brimnes-combinacao-movel-tv-branco__1452023_pe990849_s5.avif",
+        altImages: ["Assets/brimnes-combinacao-movel-tv-branco__1070482_pe854621_s5.avif"],
+        dimensions: "240 x 41 x 190 cm (Largura x Profundidade x Altura)",
+        materials: "Estruturas MDF aglomeradas com folha acrílica branca, vitrinas de vidro temperado.",
+        description: "Uma parede de entretenimento completa e elegante. Combina o móvel de TV central com duas estantes laterais de arrumação fechada e vitrinas, ideal para expor livros e decorações e guardar objetos do dia a dia.",
+        family: "brimnes-tv",
+        colorName: "Branco Composto",
+        colorCode: "#ececec"
     },
     // Kallax TV Family
     {
