@@ -2418,3 +2418,44 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Modal Variant Swatches styling */
+.modal-product-variants {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.variants-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.variants-list {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.variant-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--bg-offwhite);
+    transition: var(--transition-fast);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 0;
+}
+
+.variant-dot:hover, .variant-dot.active {
+    transform: scale(1.18);
+    box-shadow: 0 0 0 2px var(--nude-dark);
+}
+
+

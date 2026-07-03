@@ -47,20 +47,7 @@ const PRODUCTS = [
         materials: "Aço reforçado nas articulações, enchimento de poliuretano de alta densidade. Tecido Hillared de luxo de textura rica.",
         description: "O sofá Eskilstuna destaca-se pela sua cabeceira alta e ajustável e encostos reclináveis, garantindo conforto ergonómico absoluto. A chaise longue pode ser posicionada à esquerda ou à direita, adaptando-se perfeitamente ao layout da sua sala."
     },
-    {
-        id: "besta-tv-white-green",
-        name: "Bestå",
-        type: "Móvel de TV com gavetas e portas",
-        category: "tv",
-        ref: "142.062.30",
-        price: "48.500 MT",
-        priceValue: 48500,
-        image: "Assets/besta-movel-de-tv-c-gavetas-branco-krukmakare-verde-acinzentado-escuro__1420625_pe977430_s5.avif",
-        altImages: [],
-        dimensions: "180 x 42 x 74 cm (Largura x Profundidade x Altura)",
-        materials: "Frentes com acabamento lacado mate e Krukmakare verde-acinzentado escuro. Puxadores minimalistas e corrediças de fecho suave.",
-        description: "Esta versão elegante da linha Bestå combina o minimalismo do branco com frentes texturizadas Krukmakare num tom verde-acinzentado escuro ultra-luxuoso. Ideal para acrescentar um contraste orgânico a paredes claras."
-    },
+    // Bestå TV Family
     {
         id: "besta-tv-white",
         name: "Bestå Lappviken Branco",
@@ -73,7 +60,27 @@ const PRODUCTS = [
         altImages: ["Assets/besta-movel-de-tv-c-gavetas-branco-lappviken-stubbarp-branco__0375474_pe553091_s5.avif"],
         dimensions: "180 x 42 x 48 cm (Largura x Profundidade x Altura)",
         materials: "Estrutura em fibra de madeira com acabamento em folha de melamina de alta resistência. Pés Stubbarp elegantes.",
-        description: "O móvel de TV Bestå Lappviken Branco é a própria definição de pureza visual. O seu acabamento branco brilhante e frentes lisas criam um aspeto contínuo que se funde com a decoração da sua sala, mantendo os cabos e aparelhos elegantemente ocultos."
+        description: "O móvel de TV Bestå Lappviken Branco é a própria definição de pureza visual. O seu acabamento branco brilhante e frentes lisas criam um aspeto contínuo que se funde com a decoração da sua sala, mantendo os cabos e aparelhos elegantemente ocultos.",
+        family: "besta-tv",
+        colorName: "Branco",
+        colorCode: "#ffffff"
+    },
+    {
+        id: "besta-tv-white-green",
+        name: "Bestå Krukmakare Verde-Cinza",
+        type: "Móvel de TV com gavetas e portas",
+        category: "tv",
+        ref: "142.062.30",
+        price: "48.500 MT",
+        priceValue: 48500,
+        image: "Assets/besta-movel-de-tv-c-gavetas-branco-krukmakare-verde-acinzentado-escuro__1420625_pe977430_s5.avif",
+        altImages: [],
+        dimensions: "180 x 42 x 74 cm (Largura x Profundidade x Altura)",
+        materials: "Frentes com acabamento lacado mate e Krukmakare verde-acinzentado escuro. Puxadores minimalistas e corrediças de fecho suave.",
+        description: "Esta versão elegante da linha Bestå combina o minimalismo do branco com frentes texturizadas Krukmakare num tom verde-acinzentado escuro ultra-luxuoso. Ideal para acrescentar um contraste orgânico a paredes claras.",
+        family: "besta-tv",
+        colorName: "Verde-Cinza",
+        colorCode: "#5f6c64"
     },
     {
         id: "besta-tv-oak",
@@ -87,7 +94,10 @@ const PRODUCTS = [
         altImages: [],
         dimensions: "180 x 42 x 64 cm (Largura x Profundidade x Altura)",
         materials: "MDF revestido a folha de carvalho natural com velatura branca protetora, conferindo uma textura mate natural.",
-        description: "Com um acabamento de carvalho com velatura branca, este móvel Bestå traz o calor e o aconchego da madeira natural sem perder a leveza visual. As portas Hanviken moldadas acrescentam um toque clássico-moderno sublime."
+        description: "Com um acabamento de carvalho com velatura branca, este móvel Bestå traz o calor e o aconchego da madeira natural sem perder a leveza visual. As portas Hanviken moldadas acrescentam um toque clássico-moderno sublime.",
+        family: "besta-tv",
+        colorName: "Carvalho",
+        colorCode: "#e3d4c3"
     },
     {
         id: "besta-tv-black",
@@ -101,7 +111,10 @@ const PRODUCTS = [
         altImages: ["Assets/besta-movel-de-tv-c-gavetas-preto-castanho-lappviken-stubbarp-preto-castanho__0341752_pe531768_s5.avif"],
         dimensions: "180 x 42 x 48 cm (Largura x Profundidade x Altura)",
         materials: "Frentes Lappviken preto-castanho com textura de madeira sutil ao toque. Estrutura robusta anti-riscos.",
-        description: "Para salas de estar que procuram uma presença dramática e sofisticada, este Bestå preto-castanho é ideal. Combina lindamente com decorações modernas, contrastando com paredes em tons nude e elementos metálicos dourados."
+        description: "Para salas de estar que procuram uma presença dramática e sofisticada, este Bestå preto-castanho é ideal. Combina lindamente com decorações modernas, contrastando com paredes em tons nude e elementos metálicos dourados.",
+        family: "besta-tv",
+        colorName: "Preto-Castanho",
+        colorCode: "#2a2421"
     },
     {
         id: "besta-tv-walnut",
@@ -115,22 +128,116 @@ const PRODUCTS = [
         altImages: ["Assets/besta-movel-de-tv-pret-cast-lappviken-efeito-nogueira__1449590_pe989968_s5.avif"],
         dimensions: "120 x 42 x 48 cm (Largura x Profundidade x Altura)",
         materials: "Frentes com acabamento em folha efeito nogueira e laterais em preto mate de alta qualidade.",
-        description: "Compacto e elegante, este móvel Bestå exibe um impressionante efeito de nogueira de grão rico. Perfeito para apartamentos sofisticados em Maputo ou espaços que exigem arrumação otimizada sem comprometer o design luxuoso."
+        description: "Compacto e elegante, este móvel Bestå exibe um impressionante efeito de nogueira de grão rico. Perfeito para apartamentos sofisticados em Maputo ou espaços que exigem arrumação otimizada sem comprometer o design luxuoso.",
+        family: "besta-tv",
+        colorName: "Nogueira",
+        colorCode: "#5c4033"
     },
     {
-        id: "tv-brimnes",
+        id: "besta-burs-white",
+        name: "Bestå Burs",
+        type: "Móvel de TV alto brilho branco",
+        category: "tv",
+        ref: "302.651.38",
+        price: "48.900 MT",
+        priceValue: 48900,
+        image: "Assets/besta-burs-movel-tv-brilh-branco__1459114_pe993298_s5.avif",
+        altImages: ["Assets/besta-burs-movel-tv-brilh-branco__65138_pe175906_s5.avif"],
+        dimensions: "180 x 41 x 49 cm (Largura x Profundidade x Altura)",
+        materials: "Frentes em placa de partículas de alto brilho lacadas a branco, com corrediças metálicas ocultas.",
+        description: "O móvel Bestå Burs traz uma sofisticação elegante com o seu acabamento lacado branco brilhante. Perfeito para decorações modernas e minimalistas.",
+        family: "besta-tv",
+        colorName: "Branco Brilhante",
+        colorCode: "#f3f3f3"
+    },
+    // Brimnes TV Family
+    {
+        id: "tv-brimnes-black",
         name: "Brimnes Preto",
-        type: "Móvel de TV funcional com prateleiras e gavetas",
+        type: "Móvel de TV com prateleiras e gavetas",
         category: "tv",
         ref: "704.610.91",
         price: "24.500 MT",
         priceValue: 24500,
         image: "Assets/brimnes-movel-tv-preto__0704610_pe725291_s5.avif",
-        altImages: [],
+        altImages: ["Assets/brimnes-movel-tv-preto__1452002_pe990828_s5.avif", "Assets/brimnes-movel-tv-preto__1452004_pe990826_s5.avif"],
         dimensions: "120 x 41 x 53 cm (Largura x Profundidade x Altura)",
-        materials: "Frentes de gaveta com vidro temperado, corrediças metálicas e compartimento de cabos no painel traseiro.",
-        description: "O Brimnes oferece uma excelente arrumação compacta. As gavetas com detalhes em vidro dão um charme extra, ideal para guardar comandos e jogos, mantendo os aparelhos de multimédia organizados nas prateleiras abertas."
+        materials: "Frentes de gaveta com vidro tempo, corrediças metálicas e compartimento de cabos no painel traseiro.",
+        description: "O Brimnes oferece uma excelente arrumação compacta. As gavetas com detalhes em vidro dão um charme extra, ideal para guardar comandos e jogos, mantendo os aparelhos de multimédia organizados nas prateleiras abertas.",
+        family: "brimnes-tv",
+        colorName: "Preto",
+        colorCode: "#000000"
     },
+    {
+        id: "tv-brimnes-white",
+        name: "Brimnes Branco",
+        type: "Móvel de TV com prateleiras e gavetas",
+        category: "tv",
+        ref: "704.610.92",
+        price: "24.500 MT",
+        priceValue: 24500,
+        image: "Assets/brimnes-movel-tv-branco__1451999_pe990825_s5.avif",
+        altImages: ["Assets/brimnes-movel-tv-branco__0601754_pe681623_s5.avif", "Assets/brimnes-movel-tv-branco__1454290_pe991599_s5.avif"],
+        dimensions: "120 x 41 x 53 cm (Largura x Profundidade x Altura)",
+        materials: "Madeira aglomerada com acabamento em folha branca, gavetas de vidro temperado e corrediças suaves.",
+        description: "A versão branca do móvel Brimnes traz um visual brilhante e arejado para a sua sala de estar. Altamente funcional com amplo espaço para organizar consolas de jogos e ocultar cabos.",
+        family: "brimnes-tv",
+        colorName: "Branco",
+        colorCode: "#ffffff"
+    },
+    // Kallax TV Family
+    {
+        id: "tv-kallax-white",
+        name: "Kallax Branco",
+        type: "Móvel de TV / Estante minimalista",
+        category: "tv",
+        ref: "123.898.71",
+        price: "18.900 MT",
+        priceValue: 18900,
+        image: "Assets/kallax-tv-bench-white__1248783_pe923213_s5.avif",
+        altImages: ["Assets/kallax-tv-bench-white__1238898_pe918671_s5.avif"],
+        dimensions: "147 x 39 x 57 cm (Largura x Profundidade x Altura)",
+        materials: "Estrutura alveolar leve em MDF com revestimento acrílico e folha de papel branca.",
+        description: "Use o móvel de TV Kallax no chão ou como divisória de ambientes. A sua estrutura limpa com cubos abertos convida a uma personalização total com caixas ou cestos de arrumação.",
+        family: "kallax-tv",
+        colorName: "Branco",
+        colorCode: "#ffffff"
+    },
+    {
+        id: "tv-kallax-black",
+        name: "Kallax Preto-Castanho",
+        type: "Móvel de TV / Estante minimalista",
+        category: "tv",
+        ref: "123.897.69",
+        price: "19.900 MT",
+        priceValue: 19900,
+        image: "Assets/kallax-tv-bench-black-brown__1272912_pe929814_s5.avif",
+        altImages: ["Assets/kallax-tv-bench-black-brown__1238897_pe918669_s5.avif"],
+        dimensions: "147 x 39 x 57 cm (Largura x Profundidade x Altura)",
+        materials: "Estrutura em fibra de madeira revestida a folha preta e castanha de grão texturizado.",
+        description: "A clássica estante e móvel de TV Kallax num acabamento preto-castanho profundo. Oferece 4 nichos abertos perfeitos para caixas organizadoras e prateleira superior robusta.",
+        family: "kallax-tv",
+        colorName: "Preto-Castanho",
+        colorCode: "#27211e"
+    },
+    {
+        id: "tv-kallax-oak",
+        name: "Kallax Carvalho Velado",
+        type: "Móvel de TV / Estante minimalista",
+        category: "tv",
+        ref: "123.899.70",
+        price: "19.900 MT",
+        priceValue: 19900,
+        image: "Assets/kallax-tv-bench-white-stained-oak-effect__1248784_pe923212_s5.avif",
+        altImages: ["Assets/kallax-tv-bench-white-stained-oak-effect__1238899_pe918670_s5.avif"],
+        dimensions: "147 x 39 x 57 cm (Largura x Profundidade x Altura)",
+        materials: "Estrutura alveolar com acabamento efeito carvalho com velatura branca escandinava.",
+        description: "O acabamento efeito carvalho traz calor natural e textura orgânica mate ao Kallax, mantendo a versatilidade de cubos abertos que caracterizam o design.",
+        family: "kallax-tv",
+        colorName: "Carvalho",
+        colorCode: "#d7c0a3"
+    },
+    // Vihals
     {
         id: "tv-vihals",
         name: "Vihals Branco",
@@ -145,6 +252,7 @@ const PRODUCTS = [
         materials: "Painel de partículas com folha de melamina branca premium e pés integrados niveladores.",
         description: "Clean, simples e incrivelmente prático. O Vihals adapta-se a qualquer espaço, oferecendo prateleiras abertas para facilitar o arrefecimento e a conexão de consolas de jogos e boxes de TV."
     },
+    // Storage Hauga
     {
         id: "storage-hauga",
         name: "Hauga Cinzento",
@@ -159,20 +267,7 @@ const PRODUCTS = [
         materials: "Portas em vidro temperado de alta segurança, dobradiças ajustáveis e acabamento em cinzento mate requintado.",
         description: "O armário vitrina Hauga é o local perfeito para expor as suas loiças mais finas ou peças de arte colecionadas. O seu tampo superior caraterístico e as portas de vidro conferem-lhe uma identidade intemporal que enriquece qualquer sala de jantar ou estar."
     },
-    {
-        id: "storage-skruvby-blue",
-        name: "Skruvby Azul Escuro",
-        type: "Armário de arrumação com portas de vidro",
-        category: "storage",
-        ref: "133.301.10",
-        price: "28.500 MT",
-        priceValue: 28500,
-        image: "Assets/skruvby-combinacao-de-arrumacao-azul-preto__1333010_pe946381_s5.avif",
-        altImages: [],
-        dimensions: "70 x 37 x 90 cm (Largura x Profundidade x Altura)",
-        materials: "Acabamento lacado azul-escuro profundo (quase preto), portas com vidro e puxadores em metal escurecido.",
-        description: "Esta peça da linha Skruvby destaca-se pela sua cor azul profunda e elegante, que acrescenta sofisticação e personalidade instantânea ao ambiente. Perfeito como livreiro ou armário de bar."
-    },
+    // Skruvby Cabinets
     {
         id: "storage-skruvby-white",
         name: "Skruvby Branco",
@@ -185,8 +280,29 @@ const PRODUCTS = [
         altImages: [],
         dimensions: "70 x 37 x 90 cm (Largura x Profundidade x Altura)",
         materials: "Acabamento branco com frentes tradicionais em relevo e puxadores discretos.",
-        description: "A versão branca do armário Skruvby traz uma leveza romântica e clássica para salas pequenas ou quartos, combinando o design tradicional com a funcionalidade de arrumação moderna."
+        description: "A versão branca do armário Skruvby traz uma leveza romântica e clássica para salas pequenas ou quartos, combinando o design tradicional com a funcionalidade de arrumação moderna.",
+        family: "skruvby-cabinet",
+        colorName: "Branco",
+        colorCode: "#ffffff"
     },
+    {
+        id: "storage-skruvby-blue",
+        name: "Skruvby Azul Escuro",
+        type: "Armário de arrumação com portas de vidro",
+        category: "storage",
+        ref: "133.301.10",
+        price: "28.500 MT",
+        priceValue: 28500,
+        image: "Assets/skruvby-combinacao-de-arrumacao-azul-preto__1333010_pe946381_s5.avif",
+        altImages: [],
+        dimensions: "70 x 37 x 90 cm (Largura x Profundidade x Altura)",
+        materials: "Acabamento lacado azul-escuro profundo (quase preto), portas com vidro e puxadores em metal escurecido.",
+        description: "Esta peça da linha Skruvby destaca-se pela sua cor azul profunda e elegante, que acrescenta sofisticação e personalidade instantânea ao ambiente. Perfeito como livreiro ou armário de bar.",
+        family: "skruvby-cabinet",
+        colorName: "Azul Escuro",
+        colorCode: "#1a2535"
+    },
+    // Tonstad
     {
         id: "storage-tonstad",
         name: "Tonstad Branco/Bege",
@@ -201,6 +317,266 @@ const PRODUCTS = [
         materials: "Frentes com acabamento especial em laca bege e branca de toque sedoso. Ferragens de luxo alemãs.",
         description: "O Tonstad é uma combinação de arrumação premium que joga perfeitamente com os tons nude do nosso conceito de design. As frentes refinadas e a divisória aberta central criam uma peça escultural que exala elegância discreta."
     },
+    // Bedroom Category
+    {
+        id: "bedroom-hemnes-bed",
+        name: "Hemnes Divã",
+        type: "Cama individual/dupla com 3 gavetas",
+        category: "bedroom",
+        ref: "002.287.05",
+        price: "68.500 MT",
+        priceValue: 68500,
+        image: "Assets/hemnes-cama-indiv-dupla-c-3-gav-branco__1078996_pe857423_s5.avif",
+        altImages: ["Assets/hemnes-cama-indiv-dupla-c-3-gav-branco__1014369_pe829634_s5.avif", "Assets/hemnes-cama-indiv-dupla-c-3-gav-branco__1036901_pe838568_s5.avif", "Assets/hemnes-cama-indiv-dupla-c-3-gav-branco__1092123_pe863035_s5.avif"],
+        dimensions: "209 x 89 x 86 cm (Comprimento x Largura x Altura)",
+        materials: "Estrutura em madeira maciça de pinho com acabamento em verniz acrílico branco. Puxadores de metal preto.",
+        description: "Este divã versátil transforma-se rapidamente de sofá de dia para cama individual ou de casal. Dispõe de 3 gavetas espaçosas integradas na base para guardar colchas, almofadas e lençóis de forma elegante."
+    },
+    {
+        id: "bedroom-gullaberg-white",
+        name: "Gullaberg Branco",
+        type: "Mesa de cabeceira tradicional",
+        category: "bedroom",
+        ref: "204.836.71",
+        price: "14.500 MT",
+        priceValue: 14500,
+        image: "Assets/gullaberg-mesa-de-cabeceira-com-1gaveta-c-porta-branco__1348181_pe951161_s5.avif",
+        altImages: ["Assets/gullaberg-mesa-de-cabeceira-com-1gaveta-c-porta-branco__1283771_pe932625_s5.avif"],
+        dimensions: "39 x 39 x 65 cm (Largura x Profundidade x Altura)",
+        materials: "Fibra de madeira MDF com acabamento em laca branca fosca. Ferragens metálicas cromadas.",
+        description: "A mesa de cabeceira Gullaberg oferece uma arrumação fechada de estilo clássico, com pernas torneadas e frentes em relevo. Perfeita para quartos luxuosos e aconchegantes.",
+        family: "gullaberg-bed",
+        colorName: "Branco",
+        colorCode: "#ffffff"
+    },
+    {
+        id: "bedroom-gullaberg-grey",
+        name: "Gullaberg Cinzento",
+        type: "Mesa de cabeceira tradicional",
+        category: "bedroom",
+        ref: "204.836.75",
+        price: "14.500 MT",
+        priceValue: 14500,
+        image: "Assets/gullaberg-mesa-de-cabeceira-com-1gaveta-c-porta-cinz__1283775_pe932629_s5.avif",
+        altImages: [],
+        dimensions: "39 x 39 x 65 cm (Largura x Profundidade x Altura)",
+        materials: "Fibra de madeira MDF com acabamento em laca cinza escuro mate de toque sedoso.",
+        description: "A versão cinza mate da mesa Gullaberg traz um ton neutro rico e elegante para o quarto, encaixando-se perfeitamente com roupas de cama brancas e nude.",
+        family: "gullaberg-bed",
+        colorName: "Cinzento",
+        colorCode: "#7d7d7d"
+    },
+    // Outdoor Category
+    {
+        id: "outdoor-bockoen-hammock",
+        name: "Bockoen Rede",
+        type: "Rede de descanso com suporte",
+        category: "outdoor",
+        ref: "594.286.13",
+        price: "22.500 MT",
+        priceValue: 22500,
+        image: "Assets/bockoen-hamnoen-hammock-with-stand-black-anthracite-white__1185298_pe898345_s5.avif",
+        altImages: ["Assets/bockoen-hamnoen-hammock-with-stand-black-anthracite-white__1146335_pe882997_s5.avif", "Assets/bockoen-hamnoen-hammock-with-stand-black-anthracite-white__1198275_pe904128_s5.avif"],
+        dimensions: "301 x 119 x 129 cm (Comprimento x Largura x Altura)",
+        materials: "Suporte em aço galvanizado pintado a pó preto. Rede em tecido 100% poliéster durável e cordas náuticas reforçadas.",
+        description: "Desfrute de tardes preguiçosas e relaxamento absoluto no seu jardim ou terraço. A rede Bockoen com suporte de aço é estável, segura e não requer ganchos na parede ou árvores."
+    },
+    {
+        id: "outdoor-vittskaer-set",
+        name: "Vittskär Lounge",
+        type: "Conjunto exterior em rattan plástico",
+        category: "outdoor",
+        ref: "894.250.11",
+        price: "95.000 MT",
+        priceValue: 95000,
+        image: "Assets/vittskaer-3-seat-conversation-set-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1419145_pe976882_s5.avif",
+        altImages: ["Assets/vittskaer-3-seat-sofa-with-chaise-longue-armrests-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1434251_pe983411_s5.avif", "Assets/vittskaer-table-plastic-rattan-outdoor-dark-gray__1470036_pe996783_s5.avif", "Assets/vittskaer-modular-loveseat-armrests-outdoor-plastic-rattan-dark-gray-froesoen-duvholmen-beige__1418786_pe976723_s5.avif"],
+        dimensions: "Sofá: 220 x 145 x 75 cm. Mesa: 68 x 68 x 38 cm.",
+        materials: "Estrutura de aço galvanizado, rattan sintético cinza escuro resistente a UV. Almofadas de exterior bege com enchimento repelente à água.",
+        description: "Transforme o seu pátio com o conjunto Vittskär. Feito em rattan sintético trançado à mão, combina o requinte do cinza escuro com almofadas acolhedoras em bege de alta resiliência, ideais para climas costeiros."
+    },
+    {
+        id: "outdoor-segeroen-lounger",
+        name: "Segerön Espreguiçadeira",
+        type: "Espreguiçadeira exterior com rodas",
+        category: "outdoor",
+        ref: "294.132.83",
+        price: "32.000 MT",
+        priceValue: 32000,
+        image: "Assets/segeroen-sun-lounger-outdoor-white-beige-froesoen-duvholmen-beige__1185546_pe898460_s5.avif",
+        altImages: ["Assets/segeroen-sun-lounger-outdoor-white-beige-froesoen-duvholmen-beige__1190992_pe900370_s5.avif", "Assets/segeroen-sun-lounger-outdoor-white-beige-froesoen-duvholmen-beige__1191452_ph191307_s5.avif"],
+        dimensions: "195 x 71 x 43 cm (Comprimento x Largura x Altura)",
+        materials: "Alumínio termolacado branco, tecido sintético mesh de exterior resistente a sol e humidade. Almofada bege.",
+        description: "A espreguiçadeira Segerön combina a leveza e durabilidade do alumínio com almofadas macias bege Frösön/Duvholmen. Com rodas integradas, é fácil de mover para seguir a sombra ou o sol no seu jardim."
+    },
+    {
+        id: "outdoor-skarpoe-chair",
+        name: "Skarpö Cadeira",
+        type: "Poltrona de exterior empilhável",
+        category: "outdoor",
+        ref: "702.341.02",
+        price: "8.900 MT",
+        priceValue: 8900,
+        image: "Assets/skarpoe-armchair-outdoor-white__0979042_ph175831_s5.avif",
+        altImages: ["Assets/skarpoe-armchair-outdoor-white__0729491_pe737010_s5.avif"],
+        dimensions: "74 x 74 x 71 cm (Largura x Profundidade x Altura)",
+        materials: "Polipropileno moldado a alta pressão com aditivos anti-desbotamento UV.",
+        description: "Um ícone contemporâneo do mobiliário de exterior. A cadeira Skarpö oferece um assento espaçoso, ergonómico e com um prático orifício central para drenagem da água da chuva."
+    },
+    {
+        id: "outdoor-tegeloen-set",
+        name: "Tegelön Conversação",
+        type: "Conjunto lounge exterior de 4 lugares",
+        category: "outdoor",
+        ref: "394.087.73",
+        price: "75.000 MT",
+        priceValue: 75000,
+        image: "Assets/tegeloen-4-seat-conversation-set-outdoor-dark-grey-black__1390873_pe965604_s5.avif",
+        altImages: ["Assets/tegeloen-4-seat-conversation-set-outdoor-dark-grey-black__1377092_pe960751_s5.avif", "Assets/tegeloen-4-seat-conversation-set-outdoor-dark-grey-black__1413052_ph202086_s5.avif"],
+        dimensions: "Sofá: 135 x 74 x 70 cm. Cadeiras: 68 x 74 x 70 cm.",
+        materials: "Estrutura de aço galvanizado, corda elástica tecida à mão e almofadas cinza escuro de alta densidade.",
+        description: "Conforto moderno e ventilação ideal. A linha Tegelön utiliza cordas flexíveis e resistentes à chuva tecidas sobre aço preto, criando um design arrojado e moderno que se adapta ao clima moçambicano."
+    },
+    // Skogsoen Easy Chairs
+    {
+        id: "outdoor-skogsoen-green",
+        name: "Skogsön Verde",
+        type: "Poltrona de exterior minimalista",
+        category: "outdoor",
+        ref: "135.223.33",
+        price: "18.500 MT",
+        priceValue: 18500,
+        image: "Assets/skogsoen-easy-chair-light-green-outdoor__1368589_pe957813_s5.avif",
+        altImages: ["Assets/skogsoen-easy-chair-light-green-outdoor__1352233_pe952159_s5.avif"],
+        dimensions: "72 x 75 x 72 cm",
+        materials: "Aço termolacado a pó verde claro e assento de tecido resistente a UV.",
+        description: "Skogsön é a fusão de estilo industrial e aconchego. O tom verde claro harmoniza lindamente com plantas e jardins exteriores.",
+        family: "skogsoen-chair",
+        colorName: "Verde",
+        colorCode: "#8ca893"
+    },
+    {
+        id: "outdoor-skogsoen-grey",
+        name: "Skogsön Cinzento",
+        type: "Poltrona de exterior minimalista",
+        category: "outdoor",
+        ref: "135.223.32",
+        price: "18.500 MT",
+        priceValue: 18500,
+        image: "Assets/skogsoen-easy-chair-light-grey-outdoor__1368584_pe957808_s5.avif",
+        altImages: ["Assets/skogsoen-easy-chair-light-grey-outdoor__1352232_pe952160_s5.avif"],
+        dimensions: "72 x 75 x 72 cm",
+        materials: "Aço termolacado a pó cinza claro com capas acolchoadas laváveis.",
+        description: "A esbelta cadeira de exterior Skogsön em cinza claro oferece um conforto envolvente e design clean que complementa qualquer espaço gourmet ou alpendre.",
+        family: "skogsoen-chair",
+        colorName: "Cinzento",
+        colorCode: "#b8b8b8"
+    },
+    // Tanebro Side Tables
+    {
+        id: "outdoor-tanebro-anthracite",
+        name: "Tanebro Antracite",
+        type: "Mesa de apoio interior/exterior",
+        category: "outdoor",
+        ref: "129.832.29",
+        price: "7.500 MT",
+        priceValue: 7500,
+        image: "Assets/tanebro-side-table-indoor-outdoor-anthracite__1322867_pe942311_s5.avif",
+        altImages: ["Assets/tanebro-side-table-indoor-outdoor-anthracite__1298329_pe936207_s5.avif"],
+        dimensions: "45 x 45 x 46 cm",
+        materials: "Aço com revestimento em pó de poliéster mate antiderrapante.",
+        description: "Tanebro é leve, robusta e fácil de transportar. A sua cor antracite confere um toque luxuoso minimalista, servindo perfeitamente de apoio a espreguiçadeiras.",
+        family: "tanebro-table",
+        colorName: "Antracite",
+        colorCode: "#2e2e2e"
+    },
+    {
+        id: "outdoor-tanebro-beige",
+        name: "Tanebro Bege-Cinza",
+        type: "Mesa de apoio interior/exterior",
+        category: "outdoor",
+        ref: "129.139.92",
+        price: "7.500 MT",
+        priceValue: 7500,
+        image: "Assets/tanebro-side-table-indoor-outdoor-light-grey-beige__1323451_pe942710_s5.avif",
+        altImages: ["Assets/tanebro-side-table-indoor-outdoor-light-grey-beige__1291392_pe934885_s5.avif"],
+        dimensions: "45 x 45 x 46 cm",
+        materials: "Aço galvanizado tratado termicamente em bege areia mate.",
+        description: "Esta versão em bege-cinza é o epítome dos tons nude da Confyhouse. Neutralidade requintada e alta resistência a UV.",
+        family: "tanebro-table",
+        colorName: "Bege-Cinza",
+        colorCode: "#d2c5b7"
+    },
+    {
+        id: "outdoor-tanebro-yellow",
+        name: "Tanebro Amarelo",
+        type: "Mesa de apoio interior/exterior",
+        category: "outdoor",
+        ref: "146.090.00",
+        price: "7.500 MT",
+        priceValue: 7500,
+        image: "Assets/tanebro-side-table-indoor-outdoor-pale-yellow__1460900_pe994050_s5.avif",
+        altImages: ["Assets/tanebro-side-table-indoor-outdoor-pale-yellow__1463962_pe994553_s5.avif"],
+        dimensions: "45 x 45 x 46 cm",
+        materials: "Aço termolacado a pó em amarelo pastel suave de toque suave.",
+        description: "Um ponto de luz e descontração. A mesa Tanebro amarelo claro traz vitalidade e leveza ao seu pátio de forma discreta.",
+        family: "tanebro-table",
+        colorName: "Amarelo",
+        colorCode: "#f3e1a0"
+    },
+    // Runnen Decking
+    {
+        id: "outdoor-runnen-acacia",
+        name: "Runnen Acácia",
+        type: "Placas de deck exterior (9 un.)",
+        category: "outdoor",
+        ref: "115.115.71",
+        price: "3.200 MT / m²",
+        priceValue: 3200,
+        image: "Assets/runnen-floor-decking-outdoor-acacia__1151158_pe884807_s5.avif",
+        altImages: ["Assets/runnen-floor-decking-outdoor-acacia__1174005_ph190433_s5.avif"],
+        dimensions: "30 x 30 x 2 cm (Placa)",
+        materials: "Madeira maciça de acácia com velatura acrílica protetora e base em plástico de encaixe simples.",
+        description: "Renove instantaneamente o seu pátio ou varanda. As placas Runnen em acácia natural dão o conforto quente e luxuoso da madeira verdadeira, com encaixe sob pressão simples.",
+        family: "runnen-decking",
+        colorName: "Acácia",
+        colorCode: "#ac764c"
+    },
+    {
+        id: "outdoor-runnen-grey",
+        name: "Runnen Cinza Escuro",
+        type: "Placas de deck exterior (9 un.)",
+        category: "outdoor",
+        ref: "023.743.41",
+        price: "2.900 MT / m²",
+        priceValue: 2900,
+        image: "Assets/runnen-floor-decking-outdoor-dark-grey__0673250_pe717131_s5.avif",
+        altImages: ["Assets/runnen-floor-decking-outdoor-dark-grey__0997243_ph177160_s5.avif"],
+        dimensions: "30 x 30 x 2 cm (Placa)",
+        materials: "Plástico de polipropileno reciclado cinza escuro de alta aderência e resistência térmica.",
+        description: "Prático, limpo e sem necessidade de manutenção. O deck Runnen cinza traz um estilo gráfico contemporâneo a varandas e caminhos exteriores.",
+        family: "runnen-decking",
+        colorName: "Cinza",
+        colorCode: "#4e4e4e"
+    },
+    {
+        id: "outdoor-runnen-grass",
+        name: "Runnen Relva Artificial",
+        type: "Placas de deck com relva (9 un.)",
+        category: "outdoor",
+        ref: "054.720.01",
+        price: "3.500 MT / m²",
+        priceValue: 3500,
+        image: "Assets/runnen-floor-decking-outdoor-artificial-grass__0907946_pe656500_s5.avif",
+        altImages: ["Assets/runnen-floor-decking-outdoor-artificial-grass__0997453_ph176846_s5.avif"],
+        dimensions: "30 x 30 x 2 cm (Placa)",
+        materials: "Polietileno sintético com aspeto de relva fresca e base plástica drenante.",
+        description: "Crie um canto verde luxuriante na sua varanda ou pátio sem regas. A relva sintética macia sob os pés convida à descontração completa.",
+        family: "runnen-decking",
+        colorName: "Relva",
+        colorCode: "#4a703d"
+    },
+    // Decor Category
     {
         id: "decor-sandtrav",
         name: "Sandtrav",
@@ -214,6 +590,48 @@ const PRODUCTS = [
         dimensions: "50 x 50 cm",
         materials: "Capa 100% algodão biológico texturizado. Enchimento de penas de pato macias e sustentáveis.",
         description: "Acrescente textura e calor ao seu sofá com a almofada Sandtrav. O seu padrão bege e branco cria um conforto tátil e visual acolhedor, integrando-se idealmente na nossa paleta de tons nude."
+    },
+    {
+        id: "decor-blidvaeder-lamp",
+        name: "Blidväder Candeeiro",
+        type: "Candeeiro de mesa decorativo",
+        category: "decor",
+        ref: "505.059.59",
+        price: "6.900 MT",
+        priceValue: 6900,
+        image: "Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1371868_ph199286_s5.avif",
+        altImages: ["Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1059594_pe849715_s5.avif", "Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1371869_ph199301_s5.avif"],
+        dimensions: "35 x 50 cm (Diâmetro x Altura)",
+        materials: "Base em cerâmica de grés esmaltado bege e abajur em tecido cru texturizado de linho.",
+        description: "Com a sua base cerâmica elegante e abajur de linho texturado, o candeeiro Blidväder cria uma iluminação quente e suave que enobrece qualquer aparador ou quarto."
+    },
+    {
+        id: "decor-sjaelsligt-set",
+        name: "Själsligt Acessórios",
+        type: "Conjunto de 3 cactos decorativos",
+        category: "decor",
+        ref: "003.748.06",
+        price: "2.800 MT",
+        priceValue: 2800,
+        image: "Assets/sjaelsligt-decoracao-conjunto-de-3-verde__0637480_pe698310_s5.avif",
+        altImages: ["Assets/sjaelsligt-decoracao-conjunto-de-3-verde__0903281_pe626420_s5.avif"],
+        dimensions: "Vários tamanhos (entre 10 e 16 cm de altura)",
+        materials: "Grés cerâmico pintado com vidrado verde mate texturizado.",
+        description: "Estes cactos decorativos esculpidos dão um toque contemporâneo orgânico ao seu móvel Bestá, combinando a sobriedade cerâmica com o charme botânico."
+    },
+    {
+        id: "decor-olivblad-stand",
+        name: "Olivblad Pedestal",
+        type: "Pedestal para plantas (preto)",
+        category: "decor",
+        ref: "101.078.41",
+        price: "4.900 MT",
+        priceValue: 4900,
+        image: "Assets/olivblad-plant-stand-indoor-outdoor-black__1041728_pe841133_s5.avif",
+        altImages: ["Assets/olivblad-plant-stand-indoor-outdoor-black__1010784_pe828333_s5.avif", "Assets/olivblad-plant-stand-indoor-outdoor-black__1383512_pe962579_s5.avif"],
+        dimensions: "35 x 35 x 74 cm (Largura x Profundidade x Altura)",
+        materials: "Aço termolacado a pó preto mate com proteção contra oxidação.",
+        description: "Exiba as suas plantas em diferentes níveis com o pedestal Olivblad. O seu design geométrico preto e elegante serve para interior ou exterior, criando uma floresta vertical compacta."
     }
 ];
 
@@ -483,9 +901,11 @@ function renderProducts() {
 
 function getCategoryLabel(cat) {
     switch (cat) {
-        case 'sofa': return 'Sofá';
+        case 'sofa': return 'Sofá & Poltrona';
         case 'tv': return 'Móvel de TV';
         case 'storage': return 'Arrumação';
+        case 'bedroom': return 'Quarto';
+        case 'outdoor': return 'Exterior';
         case 'decor': return 'Acessório';
         default: return 'Geral';
     }
@@ -509,6 +929,42 @@ function openProductModal(productId) {
     modalProductDims.textContent = product.dimensions;
     modalProductMaterials.textContent = product.materials;
 
+    // Update query param in URL without reload
+    const newUrl = `${window.location.pathname}?product=${product.id}`;
+    window.history.replaceState(null, '', newUrl);
+
+    // Variants/Acabamentos section
+    const variantsContainer = document.getElementById('modal-product-variants');
+    if (variantsContainer) {
+        variantsContainer.innerHTML = '';
+        if (product.family) {
+            // Find all variants in family
+            const variants = PRODUCTS.filter(p => p.family === product.family);
+            if (variants.length > 1) {
+                const variantsWrapper = document.createElement('div');
+                variantsWrapper.className = 'modal-product-variants-wrapper';
+                variantsWrapper.innerHTML = `
+                    <span class="variants-title">Acabamentos / Cores:</span>
+                    <div class="variants-list"></div>
+                `;
+                const list = variantsWrapper.querySelector('.variants-list');
+                variants.forEach(v => {
+                    const dot = document.createElement('button');
+                    dot.className = `variant-dot${v.id === product.id ? ' active' : ''}`;
+                    dot.style.backgroundColor = v.colorCode;
+                    dot.setAttribute('data-color-name', v.colorName);
+                    dot.setAttribute('aria-label', `Cor ${v.colorName}`);
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        openProductModal(v.id);
+                    });
+                    list.appendChild(dot);
+                });
+                variantsContainer.appendChild(variantsWrapper);
+            }
+        }
+    }
+
     productModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -517,6 +973,9 @@ function closeProductModal() {
     productModal.classList.remove('active');
     document.body.style.overflow = '';
     selectedModalProduct = null;
+    
+    // Clear URL query parameter
+    window.history.replaceState(null, '', window.location.pathname);
 }
 
 // --- ROOM EXPLORATION MODAL ---
