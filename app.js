@@ -317,6 +317,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initScrollAnimations();
     setupEventListeners();
+    checkUrlForProduct();
 });
 
 // --- HERO SLIDER ---
@@ -749,7 +750,11 @@ function handleWhatsAppInquiry(e) {
             const itemTotal = product.priceValue * item.quantity;
             totalEstimate += itemTotal;
             messageText += `${index + 1}. *${product.name}*\n`;
-            messageText += `   Qtd: ${item.quantity} | Preço Unit: ${product.price}\n\n`;
+            messageText += `   Qtd: ${item.quantity} | Preço Unit: ${product.price}\n`;
+            
+            // Build the clean item link to automatically open the product modal
+            const itemLink = `${window.location.origin}${window.location.pathname}?product=${product.id}`;
+            messageText += `   Ver Produto: ${itemLink}\n\n`;
         }
     });
 
@@ -772,6 +777,21 @@ function handleWhatsAppInquiry(e) {
     
     // Open Whatsapp
     window.open(whatsappUrl, '_blank');
+}
+
+// --- AUTO-OPEN PRODUCT MODAL FROM URL ---
+function checkUrlForProduct() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('product');
+    if (productId) {
+        const product = PRODUCTS.find(p => p.id === productId);
+        if (product) {
+            // Wait slightly for DOM to be ready and preloader to fade out
+            setTimeout(() => {
+                openProductModal(productId);
+            }, 1200);
+        }
+    }
 }
 
 // --- LISTENERS CONFIGURATION ---
