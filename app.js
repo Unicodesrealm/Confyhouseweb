@@ -146,7 +146,7 @@ const PRODUCTS = [
         dimensions: "180 x 41 x 49 cm (Largura x Profundidade x Altura)",
         materials: "Frentes em placa de partículas de alto brilho lacadas a branco, com corrediças metálicas ocultas.",
         description: "O móvel Bestå Burs traz uma sofisticação elegante com o seu acabamento lacado branco brilhante. Perfeito para decorações modernas e minimalistas.",
-        family: "besta-tv",
+        family: "besta-burs",
         colorName: "Branco Brilhante",
         colorCode: "#f3f3f3"
     },
@@ -163,7 +163,7 @@ const PRODUCTS = [
         dimensions: "120 x 40 x 38 cm",
         materials: "Frentes Lappviken brancas mate, estrutura Eket leve e resistente, abertura por pressão (push-open).",
         description: "O Bestå Eket suspenso cria uma sensação de leveza flutuante na sua sala. Sem pernas visíveis, facilita a limpeza e oferece um visual clean escandinavo impecável.",
-        family: "besta-tv",
+        family: "besta-eket",
         colorName: "Eket Branco",
         colorCode: "#f9f9f9"
     },
@@ -606,7 +606,7 @@ const PRODUCTS = [
         dimensions: "30 x 30 x 2 cm (Placa)",
         materials: "Polietileno sintético com aspeto de relva fresca e base plástica drenante.",
         description: "Crie um canto verde luxuriante na sua varanda ou pátio sem regas. A relva sintética macia sob os pés convida à descontração completa.",
-        family: "runnen-decking",
+        family: "runnen-grass",
         colorName: "Relva",
         colorCode: "#4a703d"
     },
@@ -1030,7 +1030,7 @@ const PRODUCTS = [
         dimensions: "146 x 73 x 71 cm",
         materials: "Vime plástico entrançado à mão, estrutura em aço e almofadas Kuddarna cinza.",
         description: "Sofá modular elegante e confortável em vime sintético cinzento escuro de aspeto natural e livre de manutenção.",
-        family: "jutholmen-sofa",
+        family: "jutholmen-sofa-2seat",
         colorName: "2 Lugares",
         colorCode: "#6e6e6e"
     },
@@ -1047,7 +1047,7 @@ const PRODUCTS = [
         dimensions: "210 x 146 x 71 cm",
         materials: "Vime plástico entrançado à mão, estrutura em aço e almofadas Kuddarna cinza.",
         description: "Sofá modular de canto ideal para aproveitar melhor o espaço do seu terraço ou pátio com o aconchego clássico do vime.",
-        family: "jutholmen-sofa",
+        family: "jutholmen-sofa-corner",
         colorName: "3 Lugares Canto",
         colorCode: "#4a4a4a"
     },
@@ -1091,10 +1091,7 @@ const PRODUCTS = [
         altImages: ["Assets/naemmaroe-chair-outdoor-foldable-light-brown-stained__1175370_ph190435_s5.avif", "Assets/naemmaroe-chair-outdoor-foldable-light-brown-stained__1175371_ph190441_s5.avif"],
         dimensions: "45 x 58 x 87 cm",
         materials: "Madeira de acácia maciça com acabamento em velatura castanha clara.",
-        description: "Cadeira dobrável e leve, de aspeto rústico moderno. Arruma-se facilmente economizando espaço precioso.",
-        family: "naemmaroe-furniture",
-        colorName: "Cadeira Dobrável",
-        colorCode: "#967455"
+        description: "Cadeira dobrável e leve, de aspeto rústico moderno. Arruma-se facilmente economizando espaço precioso."
     },
     {
         id: "outdoor-naemmaroe-lounge",
@@ -1108,10 +1105,7 @@ const PRODUCTS = [
         altImages: ["Assets/naemmaroe-lounge-chair-outdoor-light-brown-stained__1185528_pe898427_s5.avif"],
         dimensions: "62 x 65 x 75 cm",
         materials: "Madeira de acácia maciça com acabamento em velatura castanha clara.",
-        description: "A cadeira lounge Nämmarö convida ao relaxamento completo no jardim. Com design de ripas largas de estilo resort.",
-        family: "naemmaroe-furniture",
-        colorName: "Cadeira Lounge",
-        colorCode: "#7e5d3d"
+        description: "A cadeira lounge Nämmarö convida ao relaxamento completo no jardim. Com design de ripas largas de estilo resort."
     },
     {
         id: "outdoor-naemmaroe-2seat",
@@ -1125,10 +1119,7 @@ const PRODUCTS = [
         altImages: ["Assets/naemmaroe-2-seat-sofa-light-brown-stained-outdoor-kuddarna-light-grey-beige__1458352_pe993003_s5.avif", "Assets/naemmaroe-2-seat-sofa-light-brown-stained-outdoor-kuddarna-light-grey-beige__1458642_pe993104_s5.avif", "Assets/naemmaroe-2-seat-sofa-light-brown-stained-outdoor-kuddarna-light-grey-beige__1469152_pe996437_s5.avif"],
         dimensions: "140 x 74 x 75 cm",
         materials: "Madeira de acácia maciça com acabamento em velatura castanha clara e almofadas bege Kuddarna.",
-        description: "O sofá de 2 lugares modular Nämmarö proporciona um ótimo conforto para conversar no pátio ou varanda com almofadas acolchoadas.",
-        family: "naemmaroe-furniture",
-        colorName: "2 Lugares",
-        colorCode: "#c4a68a"
+        description: "O sofá de 2 lugares modular Nämmarö proporciona um ótimo conforto para conversar no pátio ou varanda com almofadas acolchoadas."
     },
     {
         id: "outdoor-naemmaroe-3seat",
@@ -1142,10 +1133,7 @@ const PRODUCTS = [
         altImages: ["Assets/naemmaroe-2-seat-sofa-light-brown-stained-outdoor-kuddarna-light-grey-beige__1458352_pe993003_s5.avif", "Assets/naemmaroe-3-seat-sofa-outdoor-with-footstool-light-brown-stained-kuddarna-light-grey-beige__1539104_pe1017560_s5.avif"],
         dimensions: "220 x 74 x 75 cm",
         materials: "Madeira de acácia maciça e almofadas Kuddarna bege impermeáveis.",
-        description: "Sofá modular de 3 lugares e puff móvel que pode ser usado como chaise longue para esticar as pernas com o máximo relaxamento.",
-        family: "naemmaroe-furniture",
-        colorName: "3 Lugares c/ Puff",
-        colorCode: "#ad8e72"
+        description: "Sofá modular de 3 lugares e puff móvel que pode ser usado como chaise longue para esticar as pernas com o máximo relaxamento."
     },
     {
         id: "outdoor-naemmaroe-table",
@@ -1159,10 +1147,7 @@ const PRODUCTS = [
         altImages: [],
         dimensions: "140 x 75 x 75 cm",
         materials: "Madeira de acácia maciça com acabamento em velatura castanha clara.",
-        description: "Mesa de jantar de jardim em acácia sustentável. Design de ripas que se enquadra na perfeição em refeições familiares ao ar livre.",
-        family: "naemmaroe-furniture",
-        colorName: "Mesa Jantar",
-        colorCode: "#917154"
+        description: "Mesa de jantar de jardim em acácia sustentável. Design de ripas que se enquadra na perfeição em refeições familiares ao ar livre."
     },
     {
         id: "outdoor-naemmaroe-lounger",
@@ -1176,10 +1161,7 @@ const PRODUCTS = [
         altImages: ["Assets/naemmaroe-sun-lounger-outdoor-light-brown-stained__1185535_pe898456_s5.avif", "Assets/naemmaroe-sun-lounger-outdoor-light-brown-stained__1191023_pe900398_s5.avif"],
         dimensions: "190 x 60 x 30 cm",
         materials: "Madeira de acácia maciça com acabamento em velatura e encosto ajustável.",
-        description: "Desfrute do banho de sol com a espreguiçadeira Nämmarö. Encosto regulável em 5 posições de inclinação para o máximo conforto.",
-        family: "naemmaroe-furniture",
-        colorName: "Espreguiçadeira",
-        colorCode: "#694e36"
+        description: "Desfrute do banho de sol com a espreguiçadeira Nämmarö. Encosto regulável em 5 posições de inclinação para o máximo conforto."
     },
     {
         id: "outdoor-naemmaroe-box",
@@ -1193,10 +1175,7 @@ const PRODUCTS = [
         altImages: ["Assets/naemmaroe-storage-box-and-privacy-screen-outdoor-light-brown-stained__1185300_pe898346_s5.avif", "Assets/naemmaroe-storage-box-and-privacy-screen-outdoor-light-brown-stained__1187308_pe899179_s5.avif"],
         dimensions: "80 x 44 x 140 cm",
         materials: "Madeira de acácia maciça e revestimento interno impermeável.",
-        description: "Uma caixa de arrumação exterior em acácia e biombo de privacidade integrado. Ideal para pendurar plantas e guardar almofadas do sol.",
-        family: "naemmaroe-furniture",
-        colorName: "Caixa & Biombo",
-        colorCode: "#533c26"
+        description: "Uma caixa de arrumação exterior em acácia e biombo de privacidade integrado. Ideal para pendurar plantas e guardar almofadas do sol."
     },
     {
         id: "outdoor-revskaer-set",
@@ -1225,7 +1204,7 @@ const PRODUCTS = [
         dimensions: "145 x 75 x 75 cm",
         materials: "Estrutura de aço termolacado branco com corda flexível e almofadas Frösön bege.",
         description: "Sofá confortável e durável com a assinatura da linha Segerön, combinando linhas brancas fluidas com almofadas nude.",
-        family: "segeroen-furniture",
+        family: "segeroen-sofa",
         colorName: "Sofá 2 Lugares",
         colorCode: "#ffffff"
     },
