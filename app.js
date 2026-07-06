@@ -633,8 +633,8 @@ const PRODUCTS = [
         ref: "505.059.59",
         price: "9.500 MT",
         priceValue: 9500,
-        image: "Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1371868_ph199286_s5.avif",
-        altImages: ["Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1059594_pe849715_s5.avif", "Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1371869_ph199301_s5.avif"],
+        image: "Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1059594_pe849715_s5.avif",
+        altImages: ["Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1371868_ph199286_s5.avif", "Assets/blidvaeder-candeeiro-de-mesa-branco-bege-ceramica-bege__1371869_ph199301_s5.avif"],
         dimensions: "35 x 50 cm (Diâmetro x Altura)",
         materials: "Base em cerâmica de grés esmaltado bege e abajur em tecido cru texturizado de linho.",
         description: "Com a sua base cerâmica elegante e abajur de linho texturado, o candeeiro Blidväder cria uma iluminação quente e suave que enobrece qualquer aparador ou quarto."
@@ -1097,6 +1097,31 @@ function openProductModal(productId) {
     // Update query param in URL without reload
     const newUrl = `${window.location.pathname}?product=${product.id}`;
     window.history.replaceState(null, '', newUrl);
+
+    // Image gallery thumbnails setup
+    const thumbnailsContainer = document.getElementById('modal-thumbnails');
+    if (thumbnailsContainer) {
+        thumbnailsContainer.innerHTML = '';
+        
+        const allImages = [product.image];
+        if (product.altImages && product.altImages.length > 0) {
+            allImages.push(...product.altImages);
+        }
+        
+        if (allImages.length > 1) {
+            allImages.forEach((imgSrc, idx) => {
+                const thumb = document.createElement('div');
+                thumb.className = `thumbnail-item${idx === 0 ? ' active' : ''}`;
+                thumb.innerHTML = `<img src="${imgSrc}" alt="Miniatura ${idx + 1}">`;
+                thumb.addEventListener('click', () => {
+                    modalProductImg.src = imgSrc;
+                    thumbnailsContainer.querySelectorAll('.thumbnail-item').forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                });
+                thumbnailsContainer.appendChild(thumb);
+            });
+        }
+    }
 
     // Variants/Acabamentos section
     const variantsContainer = document.getElementById('modal-product-variants');

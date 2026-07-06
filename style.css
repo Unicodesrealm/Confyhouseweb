@@ -1755,17 +1755,68 @@ h1, h2, h3, h4, h5, h6 {
 .modal-gallery {
     background-color: var(--bg-offwhite);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 40px;
     position: relative;
     min-height: 350px;
+    gap: 20px;
 }
 
-.modal-gallery img {
-    max-height: 400px;
+.main-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-image-container img {
+    max-height: 360px;
+    max-width: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
+    transition: var(--transition-fast);
+}
+
+.modal-thumbnails {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 4px 0;
+}
+
+.thumbnail-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--primary-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.thumbnail-item img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.thumbnail-item:hover {
+    border-color: var(--nude-medium);
+}
+
+.thumbnail-item.active {
+    border-color: var(--nude-dark);
+    outline: 2px solid var(--nude-dark);
+    outline-offset: -2px;
 }
 
 .modal-details {
@@ -2507,9 +2558,17 @@ h1, h2, h3, h4, h5, h6 {
     .modal-gallery {
         min-height: 250px;
         padding: 20px;
+        gap: 12px;
     }
-    .modal-gallery img {
-        max-height: 220px;
+    .main-image-container img {
+        max-height: 200px;
+    }
+    .modal-thumbnails {
+        gap: 8px;
+    }
+    .thumbnail-item {
+        width: 48px;
+        height: 48px;
     }
     .modal-details {
         padding: 24px 20px;
