@@ -666,6 +666,62 @@ const PRODUCTS = [
         dimensions: "35 x 35 x 74 cm (Largura x Profundidade x Altura)",
         materials: "Aço termolacado a pó preto mate com proteção contra oxidação.",
         description: "Exiba as suas plantas em diferentes níveis com o pedestal Olivblad. O seu design geométrico preto e elegante serve para interior ou exterior, criando uma floresta vertical compacta."
+    },
+    {
+        id: "decor-rug-starreklinte",
+        name: "Starreklinte",
+        type: "Tapete de tecido liso (natural/preto)",
+        category: "decor",
+        ref: "120.571.84",
+        price: "3.500 MT",
+        priceValue: 3500,
+        image: "Assets/starreklinte-rug-flatwoven-natural-black__1205718_pe907217_s5.avif",
+        altImages: ["Assets/starreklinte-rug-flatwoven-natural-black__1446059_pe988528_s5.avif"],
+        dimensions: "120 x 180 cm (Largura x Comprimento)",
+        materials: "100% algodão natural sustentável. Tecido plano resistente, fácil de sacudir e limpar.",
+        description: "O tapete Starreklinte destaca-se pelo seu aspeto rústico e artesanal em tons neutros de natural e preto. Perfeito para dar um toque acolhedor e texturado a corredores, quartos ou salas de jantar minimalistas."
+    },
+    {
+        id: "decor-rug-vollerslev",
+        name: "Vollerslev",
+        type: "Tapete de pelo alto luxuoso (branco)",
+        category: "decor",
+        ref: "093.366.31",
+        price: "14.900 MT",
+        priceValue: 14900,
+        image: "Assets/vollerslev-rug-high-pile-white__0933663_pe792171_s5.avif",
+        altImages: ["Assets/vollerslev-rug-high-pile-white__1446083_pe988540_s5.avif"],
+        dimensions: "160 x 230 cm (Largura x Comprimento)",
+        materials: "Pelo de poliéster denso e ultra-suave com base de látex sintético antiderrapante.",
+        description: "Traga o máximo de conforto para os seus pés com o tapete de pelo alto Vollerslev. A sua densidade luxuosa e toque incrivelmente macio criam uma atmosfera acolhedora e sumptuosa, ideal para salas de estar elegantes."
+    },
+    {
+        id: "decor-rug-laettbetong",
+        name: "Lättbetong",
+        type: "Tapete de tecido plano para interior/exterior",
+        category: "decor",
+        ref: "143.502.26",
+        price: "8.500 MT",
+        priceValue: 8500,
+        image: "Assets/laettbetong-rug-flatwoven-in-outdoor-beige-light-brown__1435022_pe983672_s5.avif",
+        altImages: ["Assets/laettbetong-rug-flatwoven-in-outdoor-beige-light-brown__1461201_pe994097_s5.avif"],
+        dimensions: "200 x 300 cm (Largura x Comprimento)",
+        materials: "100% polipropileno resistente a intempéries, raios UV e desgaste intenso.",
+        description: "Versátil e duradouro, o tapete Lättbetong é perfeito para ligar os seus espaços interiores com o terraço ou varanda. Com um padrão geométrico subtil em bege e castanho claro, é impermeável e extremamente fácil de lavar."
+    },
+    {
+        id: "decor-rug-tagspar",
+        name: "Tågspår",
+        type: "Tapete de pelo alto geométrico",
+        category: "decor",
+        ref: "125.069.37",
+        price: "9.800 MT",
+        priceValue: 9800,
+        image: "Assets/tagspar-rug-high-pile-white-beige__1250693_pe923950_s5.avif",
+        altImages: ["Assets/tagspar-rug-high-pile-white-beige__1250694_pe923948_s5.avif"],
+        dimensions: "133 x 195 cm (Largura x Comprimento)",
+        materials: "Fibras sintéticas densas de polipropileno de alta qualidade. Revestimento protetor antiderrapante.",
+        description: "Com um design nórdico moderno de padrão geométrico discreto em tons de branco e bege, o tapete Tågspår combina estilo e conforto de forma intemporal. O seu pelo espesso atenua o som e proporciona uma superfície suave e quente."
     }
 ];
 
@@ -689,7 +745,7 @@ const ROOMS = {
     "reading-nook": {
         title: "Aconchego Minimalista",
         image: "Assets/PH182892.avif",
-        products: ["decor-sandtrav", "storage-skruvby-white"]
+        products: ["decor-sandtrav", "storage-skruvby-white", "decor-rug-starreklinte"]
     }
 };
 
@@ -1388,6 +1444,22 @@ function setupEventListeners() {
     mobileMenuClose.addEventListener('click', () => {
         mobileNavDrawer.classList.remove('active');
         document.body.style.overflow = '';
+    });
+
+    // Close mobile nav when clicking outside on backdrop
+    mobileNavDrawer.addEventListener('click', (e) => {
+        if (e.target === mobileNavDrawer) {
+            mobileNavDrawer.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close mobile nav when menu links are clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNavDrawer.classList.remove('active');
+            document.body.style.overflow = '';
+        });
     });
 
     // Cart trigger drawer
