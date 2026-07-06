@@ -1345,6 +1345,12 @@ window.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     setupEventListeners();
     checkUrlForProduct();
+
+    // Ensure 'Tudo' filter is fully initialized and active on page load
+    const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allFilterBtn) {
+        allFilterBtn.click();
+    }
 });
 
 // --- HERO SLIDER ---
@@ -1976,6 +1982,14 @@ function setupEventListeners() {
             const href = e.currentTarget.getAttribute('href');
             if (href.startsWith('#')) {
                 e.preventDefault();
+                
+                if (href === '#collections') {
+                    const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+                    if (allFilterBtn) {
+                        allFilterBtn.click();
+                    }
+                }
+
                 const targetEl = document.querySelector(href);
                 if (targetEl) {
                     const offsetTop = targetEl.offsetTop - 80;
