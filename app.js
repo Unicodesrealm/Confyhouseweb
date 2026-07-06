@@ -679,7 +679,8 @@ const PRODUCTS = [
         altImages: ["Assets/starreklinte-rug-flatwoven-natural-black__1446059_pe988528_s5.avif"],
         dimensions: "120 x 180 cm (Largura x Comprimento)",
         materials: "100% algodão natural sustentável. Tecido plano resistente, fácil de sacudir e limpar.",
-        description: "O tapete Starreklinte destaca-se pelo seu aspeto rústico e artesanal em tons neutros de natural e preto. Perfeito para dar um toque acolhedor e texturado a corredores, quartos ou salas de jantar minimalistas."
+        description: "O tapete Starreklinte destaca-se pelo seu aspeto rústico e artesanal em tons neutros de natural e preto. Perfeito para dar um toque acolhedor e texturado a corredores, quartos ou salas de jantar minimalistas.",
+        badge: "Novo"
     },
     {
         id: "decor-rug-vollerslev",
@@ -693,7 +694,8 @@ const PRODUCTS = [
         altImages: ["Assets/vollerslev-rug-high-pile-white__1446083_pe988540_s5.avif"],
         dimensions: "160 x 230 cm (Largura x Comprimento)",
         materials: "Pelo de poliéster denso e ultra-suave com base de látex sintético antiderrapante.",
-        description: "Traga o máximo de conforto para os seus pés com o tapete de pelo alto Vollerslev. A sua densidade luxuosa e toque incrivelmente macio criam uma atmosfera acolhedora e sumptuosa, ideal para salas de estar elegantes."
+        description: "Traga o máximo de conforto para os seus pés com o tapete de pelo alto Vollerslev. A sua densidade luxuosa e toque incrivelmente macio criam uma atmosfera acolhedora e sumptuosa, ideal para salas de estar elegantes.",
+        badge: "Novo"
     },
     {
         id: "decor-rug-laettbetong",
@@ -707,7 +709,8 @@ const PRODUCTS = [
         altImages: ["Assets/laettbetong-rug-flatwoven-in-outdoor-beige-light-brown__1461201_pe994097_s5.avif"],
         dimensions: "200 x 300 cm (Largura x Comprimento)",
         materials: "100% polipropileno resistente a intempéries, raios UV e desgaste intenso.",
-        description: "Versátil e duradouro, o tapete Lättbetong é perfeito para ligar os seus espaços interiores com o terraço ou varanda. Com um padrão geométrico subtil em bege e castanho claro, é impermeável e extremamente fácil de lavar."
+        description: "Versátil e duradouro, o tapete Lättbetong é perfeito para ligar os seus espaços interiores com o terraço ou varanda. Com um padrão geométrico subtil em beige e castanho claro, é impermeável e extremamente fácil de lavar.",
+        badge: "Novo"
     },
     {
         id: "decor-rug-tagspar",
@@ -721,7 +724,8 @@ const PRODUCTS = [
         altImages: ["Assets/tagspar-rug-high-pile-white-beige__1250694_pe923948_s5.avif"],
         dimensions: "133 x 195 cm (Largura x Comprimento)",
         materials: "Fibras sintéticas densas de polipropileno de alta qualidade. Revestimento protetor antiderrapante.",
-        description: "Com um design nórdico moderno de padrão geométrico discreto em tons de branco e bege, o tapete Tågspår combina estilo e conforto de forma intemporal. O seu pelo espesso atenua o som e proporciona uma superfície suave e quente."
+        description: "Com um design nórdico moderno de padrão geométrico discreto em tons de branco e bege, o tapete Tågspår combina estilo e conforto de forma intemporal. O seu pelo espesso atenua o som e proporciona uma superfície suave e quente.",
+        badge: "Novo"
     }
 ];
 
@@ -941,8 +945,10 @@ function renderProducts() {
     filteredProducts.forEach(prod => {
         const card = document.createElement('article');
         card.className = 'product-card';
+        const badgeHtml = prod.badge ? `<span class="product-badge">${prod.badge}</span>` : '';
         card.innerHTML = `
             <div class="product-img-wrapper" style="cursor: pointer;">
+                ${badgeHtml}
                 <img src="${prod.image}" alt="${prod.name}" loading="lazy">
                 <div class="product-overlay-actions">
                     <button class="product-action-btn view-details-btn" data-id="${prod.id}">Ver Detalhes</button>
