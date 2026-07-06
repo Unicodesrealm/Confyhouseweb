@@ -1269,7 +1269,13 @@ const ROOMS = {
 };
 
 // --- STATE MANAGEMENT ---
-let cart = JSON.parse(localStorage.getItem('confyhouse_cart')) || [];
+let cart = [];
+try {
+    cart = JSON.parse(localStorage.getItem('confyhouse_cart')) || [];
+} catch (e) {
+    console.error('Error parsing cart from localStorage:', e);
+    cart = [];
+}
 let activeCategory = 'all';
 let searchQuery = '';
 
@@ -1331,14 +1337,19 @@ let slideInterval;
 let selectedModalProduct = null;
 let selectedModalQty = 1;
 
+// Resilient Preloader dismissal on page load
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('preloader');
+        if (loader) {
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+        }
+    }, 800);
+});
+
 // --- INITIALIZATION ---
 window.addEventListener('DOMContentLoaded', () => {
-    // Hide Preloader after dynamic content setup
-    setTimeout(() => {
-        preloader.style.opacity = '0';
-        preloader.style.visibility = 'hidden';
-    }, 1000);
-
     renderProducts();
     updateCartUI();
     initHeroSlider();
@@ -1980,7 +1991,7 @@ function setupEventListeners() {
     document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             const href = e.currentTarget.getAttribute('href');
-            if (href.startsWith('#')) {
+            if (href.startsWith('#') && href !== '#') {
                 e.preventDefault();
                 
                 if (href === '#collections') {
@@ -2010,8 +2021,8 @@ function setupEventListeners() {
     filterBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             filterBtns.forEach(b => b.classList.remove('active'));
-            e.target.classList.add('active');
-            activeCategory = e.target.dataset.filter;
+            btn.classList.add('active');
+            activeCategory = btn.dataset.filter;
             renderProducts();
         });
     });
