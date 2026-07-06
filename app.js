@@ -942,14 +942,54 @@ function renderProducts() {
         `;
         return;
     }
+
+    // Grouping by family to avoid duplicates on the catalog grid while keeping all options available
+    const displayedProducts = [];
+    const seenFamilies = new Set();
+    
     filteredProducts.forEach(prod => {
+        if (prod.family) {
+            if (!seenFamilies.has(prod.family)) {
+                seenFamilies.add(prod.family);
+                // Get the first variant of this family that matches the query to represent the card
+                const familyMatches = filteredProducts.filter(p => p.family === prod.family);
+                displayedProducts.push(familyMatches[0]);
+            }
+        } else {
+            displayedProducts.push(prod);
+        }
+    });
+
+    displayedProducts.forEach(prod => {
         const card = document.createElement('article');
         card.className = 'product-card';
         const badgeHtml = prod.badge ? `<span class="product-badge">${prod.badge}</span>` : '';
+        
+        // Find all variants in main database for color switcher options
+        const variants = prod.family ? PRODUCTS.filter(p => p.family === prod.family) : [];
+        let swatchesHtml = '';
+        if (variants.length > 1) {
+            swatchesHtml = `
+                <div class="card-variants">
+                    ${variants.map(v => `
+                        <button class="card-variant-dot${v.id === prod.id ? ' active' : ''}" 
+                                style="background-color: ${v.colorCode};" 
+                                data-id="${v.id}"
+                                data-name="${v.name}"
+                                data-type="${v.type}"
+                                data-price="${v.price}"
+                                data-image="${v.image}"
+                                aria-label="Cor ${v.colorName}">
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+        }
+
         card.innerHTML = `
             <div class="product-img-wrapper" style="cursor: pointer;">
                 ${badgeHtml}
-                <img src="${prod.image}" alt="${prod.name}" loading="lazy">
+                <img src="${prod.image}" alt="${prod.name}" loading="lazy" class="card-product-img">
                 <div class="product-overlay-actions">
                     <button class="product-action-btn view-details-btn" data-id="${prod.id}">Ver Detalhes</button>
                     <button class="product-action-btn btn-icon-only quick-add-btn" data-id="${prod.id}" aria-label="Adicionar à Seleção">
@@ -960,18 +1000,47 @@ function renderProducts() {
             <div class="product-info" style="cursor: pointer;">
                 <span class="product-category">${getCategoryLabel(prod.category)}</span>
                 <h4 class="product-title">${prod.name}</h4>
-                <p class="product-category" style="text-transform: none; font-size: 0.85rem; margin-bottom: 8px;">
+                <p class="product-type" style="text-transform: none; font-size: 0.85rem; margin-bottom: 8px;">
                     ${prod.type}
                 </p>
+                ${swatchesHtml}
                 <div class="product-footer">
                     <span class="product-price">${prod.price}</span>
                 </div>
             </div>
         `;
         
+        // Color switcher logic inside card
+        if (variants.length > 1) {
+            const dots = card.querySelectorAll('.card-variant-dot');
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                    
+                    const vId = dot.dataset.id;
+                    const vName = dot.dataset.name;
+                    const vType = dot.dataset.type;
+                    const vPrice = dot.dataset.price;
+                    const vImage = dot.dataset.image;
+                    
+                    card.querySelector('.card-product-img').src = vImage;
+                    card.querySelector('.card-product-img').alt = vName;
+                    card.querySelector('.product-title').textContent = vName;
+                    card.querySelector('.product-type').textContent = vType;
+                    card.querySelector('.product-price').textContent = vPrice;
+                    
+                    card.querySelector('.view-details-btn').dataset.id = vId;
+                    card.querySelector('.quick-add-btn').dataset.id = vId;
+                });
+            });
+        }
+
         card.addEventListener('click', (e) => {
-            if (!e.target.closest('.quick-add-btn')) {
-                openProductModal(prod.id);
+            if (!e.target.closest('.quick-add-btn') && !e.target.closest('.card-variant-dot')) {
+                const activeId = card.querySelector('.view-details-btn').dataset.id;
+                openProductModal(activeId);
             }
         });
         
