@@ -888,7 +888,7 @@ function initScrollAnimations() {
             }
         });
         
-        document.querySelectorAll('.nav-link').forEach(link => {
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
             if (link.getAttribute('href') === `#${currentSectionId}`) {
                 link.classList.add('active');
             } else {
@@ -1454,13 +1454,6 @@ function setupEventListeners() {
         }
     });
 
-    // Close mobile nav when menu links are clicked
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileNavDrawer.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
 
     // Cart trigger drawer
     cartTrigger.addEventListener('click', () => {
