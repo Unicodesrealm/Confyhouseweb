@@ -423,8 +423,8 @@ const PRODUCTS = [
         ref: "894.250.11",
         price: "133.000 MT",
         priceValue: 133000,
-        image: "Assets/vittskaer-3-seat-conversation-set-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1419145_pe976882_s5.avif",
-        altImages: ["Assets/vittskaer-3-seat-sofa-with-chaise-longue-armrests-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1434251_pe983411_s5.avif", "Assets/vittskaer-table-plastic-rattan-outdoor-dark-gray__1470036_pe996783_s5.avif", "Assets/vittskaer-modular-loveseat-armrests-outdoor-plastic-rattan-dark-gray-froesoen-duvholmen-beige__1418786_pe976723_s5.avif"],
+        image: "Assets/vittskaer-3-seat-conversation-set-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1434223_pe983404_s5.avif",
+        altImages: ["Assets/vittskaer-3-seat-conversation-set-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1474101_pe997934_s5.avif", "Assets/vittskaer-3-seat-conversation-set-outdoor-plastic-rattan-dark-grey-froesoen-duvholmen-beige__1419145_pe976882_s5.avif"],
         dimensions: "Sofá: 220 x 145 x 75 cm. Mesa: 68 x 68 x 38 cm.",
         materials: "Estrutura de aço galvanizado, rattan sintético cinza escuro resistente a UV. Almofadas de exterior bege com enchimento repelente à água.",
         description: "Transforme o seu pátio com o conjunto Vittskär. Feito em rattan sintético trançado à mão, combina o requinte do cinza escuro com almofadas acolhedoras em bege de alta resiliência, ideais para climas costeiros."

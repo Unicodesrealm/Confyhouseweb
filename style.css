@@ -1156,9 +1156,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Card Swatches */
 .card-variants {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 8px;
     margin-bottom: 12px;
     align-items: center;
+    width: 100%;
 }
 
 .card-variant-dot {
@@ -2500,6 +2503,10 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .card-variants {
+        justify-content: center !important;
+        margin-bottom: 8px !important;
     }
     .product-footer {
         width: 100%;
