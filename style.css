@@ -195,8 +195,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .preloader-logo {
-    height: 60px;
-    margin-bottom: 16px;
+    display: block;
+    height: 80px;
+    width: auto;
+    margin: 0 auto 16px auto;
     animation: pulseLogo 2s infinite ease-in-out;
 }
 
@@ -205,8 +207,9 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.3em;
     font-family: var(--font-sans);
     color: var(--nude-dark);
-    margin-bottom: 24px;
+    margin: 0 auto 24px auto;
     font-weight: 300;
+    text-align: center;
 }
 
 .loader-line {
@@ -334,17 +337,36 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 1002;
     text-align: center;
+    overflow: hidden;
 }
 
 .announcement-content {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 0;
 }
 
 .announcement-content i {
     color: var(--nude-light);
     font-size: 0.85rem;
+}
+
+/* Horizontal scrolling announcement marquee on mobile screens */
+@media (max-width: 600px) {
+    .announcement-bar {
+        justify-content: flex-start;
+    }
+    .announcement-content {
+        white-space: nowrap;
+        animation: announcementMarquee 20s linear infinite;
+        padding-left: 100%;
+    }
+}
+
+@keyframes announcementMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 /* Main Header */
@@ -2689,6 +2711,17 @@ h1, h2, h3, h4, h5, h6 {
 .variant-dot:hover, .variant-dot.active {
     transform: scale(1.18);
     box-shadow: 0 0 0 2px var(--nude-dark);
+}
+
+/* Tablet Layout Spacing Optimizations to prevent nav element bleeding */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 16px !important;
+    }
+    .logo-name {
+        font-size: 1.1rem !important;
+        letter-spacing: 0.1em !important;
+    }
 }
 
 
