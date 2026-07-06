@@ -734,7 +734,7 @@ const ROOMS = {
     "living-classic": {
         title: "Harmonia em Tons Neutros",
         image: "Assets/PH_191155_2_62504fcfbb.jpg",
-        products: ["sofa-vimle", "besta-tv-white", "decor-sandtrav"]
+        products: ["sofa-vimle", "besta-tv-white", "decor-blidvaeder-lamp"]
     },
     "dining-cozy": {
         title: "Simplicidade Escandinava",
